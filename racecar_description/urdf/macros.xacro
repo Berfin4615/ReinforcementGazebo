@@ -5,7 +5,7 @@
 
 <xacro:macro name="chassis_inertial_params">
   <origin xyz="0.1477 0 0" rpy="0 0 0" />
-  <mass value="10.0" />
+  <mass value="4.0" />
   <inertia ixx="0.010609" ixy="0"          ixz="0"
                           iyy="0.050409"   iyz="0"
                                            izz="0.05865" />
@@ -30,14 +30,6 @@
 <xacro:macro name="steering_hinge_inertial_params">
   <origin xyz="0 0 0" rpy="0 0 0" />
   <mass value="0.100" />
-  <inertia ixx="4E-06" ixy="0"           ixz="0"
-                            iyy="4E-06"  iyz="0"
-                                              izz="4E-06" />
-</xacro:macro>
-
-<xacro:macro name="hokuyo_inertial_params">
-  <origin xyz="0 0 0" rpy="0 0 0" />
-  <mass value="0.130" />
   <inertia ixx="4E-06" ixy="0"           ixz="0"
                             iyy="4E-06"  iyz="0"
                                               izz="4E-06" />
@@ -116,10 +108,10 @@
   <transmission name="${name}_transmission" type="SimpleTransmission">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="${name}_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="${name}_motor">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -129,10 +121,10 @@
   <transmission name="${name}_transmission" type="SimpleTransmission">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="${name}_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="${name}_motor">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>

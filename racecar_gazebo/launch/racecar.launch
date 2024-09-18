@@ -2,10 +2,10 @@
 <launch>
   <arg name="world_name" default="racecar" />
   <arg name="gui" default="true" />
-  <arg name="run_camera" default="false"/>
+  <arg name="run_camera" default="true"/>
 
-  <arg name="x_pos" default="-5.388334"/>
-  <arg name="y_pos" default="-4.094883"/>
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="0.25"/>
   <arg name="z_pos" default="0.0"/>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -13,7 +13,7 @@
     <arg name="gui" value="$(arg gui)"/>
   </include>
 
-  <!-- urdf xml robot description loaded on the Parameter Server, converting the xacro into a proper urdf file-->
+  <!-- urdf xml robot description loaded on the Parameter Server, converting the urdf into a proper urdf file-->
   <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find racecar_description)/urdf/racecar.xacro'" />
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
