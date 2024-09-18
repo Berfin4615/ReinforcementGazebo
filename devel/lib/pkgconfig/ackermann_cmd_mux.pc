@@ -1,0 +1,8 @@
+prefix=/root/racecar_rl/devel
+
+Name: ackermann_cmd_mux
+Description: Description of ackermann_cmd_mux
+Version: 0.7.0
+Cflags: -I/root/racecar_rl/devel/include -I/root/racecar_rl/src/racecar_gazebo/system/racecar/ackermann_cmd_mux/include -I/usr/include
+Libs: -L${prefix}/lib -lackermann_cmd_mux_nodelet -lyaml-cpp
+Requires: roscpp pluginlib nodelet dynamic_reconfigure ackermann_msgs rospy std_msgs
