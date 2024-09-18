@@ -1,0 +1,8 @@
+prefix=/root/racecar_rl/devel
+
+Name: racecar_simulator
+Description: Description of racecar_simulator
+Version: 0.0.0
+Cflags: -I/root/racecar_rl/src/racecar_simulator/include
+Libs: -L${prefix}/lib -lracecar_simulator
+Requires: 

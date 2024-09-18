@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic "CMakeFiles/serial-test.dir/unix_serial_tests.cc.o" -o /root/racecar_rl/devel/lib/serial/serial-test   -L/root/racecar_rl/build/gtest  -Wl,-rpath,/root/racecar_rl/build/gtest:/root/racecar_rl/build/gtest/lib:/root/racecar_rl/devel/lib ../../../../gtest/lib/libgtest.so /root/racecar_rl/devel/lib/libserial.so -lutil -lpthread -lrt -lpthread
